@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>JavaScript图像延迟加载</title>
+<style>
+.demo img { width: 736px; height: 490px; background: url(images/loading.gif) 50% no-repeat;}
+</style>
+</head>
+<body>
+<h1 style="margin: 40px; font: 32px Microsoft Yahei; text-align: center;">JavaScript图像延迟加载</h1>
+<div class="demo" style="width: 736px; margin: 0 auto;">
+	<img class="lazy" src="images/blank.gif" data-echo="images/1.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/2.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/3.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/4.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/5.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/6.jpg">
+	<img class="lazy" src="images/blank.gif" data-echo="images/7.jpg">
+</div>
+<script src="js/echo.min.js"></script>
+<script>
+Echo.init({
+	offset: 0,
+	throttle: 0
+});
+</script>
+</body>
+</html>
